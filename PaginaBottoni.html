@@ -1,0 +1,114 @@
+<html>
+    <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            .TabDue{
+                height: 100px;
+                width: 100px;
+                border: 1px outset black;
+                text-align: center;
+                margin:4px 4px;
+                background-color: rgb(255, 149, 149);
+                
+                
+            }
+
+            .TabTre{
+                height: 100px;
+                width: 100px;
+                border: 1px outset black;
+                text-align: center;
+                margin:4px 4px;
+                background-color: rgb(162, 255, 162);
+                
+            }
+
+            .TabQuattro{
+                height: 100px;
+                width: 100px;
+                border: 1px outset black;
+                text-align: center;
+                margin:4px 4px;
+                background-color: rgb(152, 152, 255);
+               
+            }
+
+            .TabCinque{
+                height: 100px;
+                width: 100px;
+                border: 1px outset black;
+                text-align: center;
+                margin:4px 4px;
+                background-color: rgb(255, 255, 139);
+               
+            }
+
+            .TabSei{
+                height: 100px;
+                width: 100px;
+                border: 1px outset black;
+                text-align: center;
+                margin:4px 4px;
+                background-color: rgb(255, 212, 133);
+               
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="Button TabDue" onclick="TabDue()">
+            <buton> 2</buton>
+        </div>
+
+        <div class="TabTre" onclick="TabTre()">
+            <buton> 3</buton>
+        </div>
+
+        <div class="TabQuattro" onclick="TabQuattro()">
+            <buton> 4</buton>
+        </div>
+
+        <p id="RisQuattro">Tabellina del 4</p>
+
+        <div class="TabCinque" onclick="TabCinque()">
+            <buton> 5</buton>
+        </div>
+
+        <p id="RisCinque">Tabellina del 5</p>
+
+        <div class="Button TabSei" onclick="TabSei()">
+            <buton> 6</buton>
+        </div>
+
+        <p id="RisSei">Tabellina del 6</p>
+
+        <script>
+            function TabDue() {
+                alert("2 - 4 - 6 - 8 - 10 - 12 - 14 - 16 - 18 - 20");
+            }
+
+            function TabTre() {
+                alert("3 - 6 - 9 - 12 - 15 - 18 - 21 - 24 - 27 - 30");
+            }
+
+            function TabQuattro() {
+                document.getElementById("RisQuattro").innerHTML="4 - 8 - 12 - 16 - 20 - 24 - 28 - 32 - 36 - 40";
+            }
+
+            function TabCinque() {
+                document.getElementById("RisCinque").innerHTML="5 - 10 - 15 - 20 - 25 - 30 - 35 - 40 - 45 - 50";
+            }
+
+            function TabSei() {
+                document.getElementById("RisSei").innerHTML="6 - 12 - 18 - 24 - 30 - 36 - 42 - 48 - 54 - 60"
+            }
+
+            
+
+        </script>
+    </body>
+</html>
