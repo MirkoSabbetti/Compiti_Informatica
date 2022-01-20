@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LanciaDadi</title>
+    <link rel="stylesheet" href="StileBottoni.css" type="text/css">
+</head>
+<body>
+    <button onclick="LanciaDado()">LANCIA IL DADO</button>
+    <p id="output"></p>
+    <button onclick="LanciaNDadi(10)">LANCIA I DADI</button>
+    <p id="outputN"></p>
+
+    <script>
+        function LanciaDado(){
+            let dado = 0;
+            let casuale = 0;
+
+            casuale=Math.random();
+            dado=Math.round(casuale*5)+1;
+            document.getElementById("output").innerHTML=dado+"<br>";
+
+        }
+
+        function LanciaNDadi(n){
+            let dado = 0;
+            let casuale = 0;
+            let str="";
+            for(let i=0;i<n;i++)
+            {
+            casuale=Math.random();
+            dado=Math.round(casuale*5)+1;
+            str=str+" "+dado+"<br>"
+            }
+
+        document.getElementById("outputN").innerHTML=str;
+
+        }
+    </script>
+</body>
+</html>
