@@ -1,0 +1,27 @@
+button {
+  position: relative;
+  display: inline-block;
+  width: 10em;
+  height: 2.5em;
+  line-height: 2.5em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #777;
+  color: #fff;
+  outline: none;
+  border: 2px solid #8a2bf6;
+  border-radius: 5px;
+  box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em rgb(75, 0, 136);
+  background: linear-gradient(#ba75fb, #9038f4 48%, #7a02ea 52%, #8e17f0);
+}
+
+button:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
