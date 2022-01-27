@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LanciaDadi</title>
-    <link rel="stylesheet" href="/Esercizi_Informatica/StileDadi.css" type="text/css">
+    <link rel="stylesheet" href="StileDadi.css" type="text/css">
 </head>
 <body>
-    <button onclick="LanciaDado()">LANCIA IL DADO</button>
+    <button id="Dado" onclick="LanciaDado()">LANCIA IL DADO</button>
     <p id="output"></p>
-    <button onclick="LanciaNDadi(10)">LANCIA I DADI</button>
+    <button id="Dado" onclick="LanciaNDadi(10)">LANCIA I DADI</button>
     <p id="outputN"></p>
+    <button id="DadoDue" onclick="LanciaDadoMille(2)">LANCIA DADO MILLE</button>
+    <p id="outputDue"></p>
+    <button id="DadoMille" onclick="LanciaMilleDadi(1000)">LANCIA MILLE DADI</button>
+    <p id="outputMille"></p>
 
     <script>
         function LanciaDado(){
@@ -20,7 +24,7 @@
 
             casuale=Math.random();
             dado=Math.round(casuale*5)+1;
-            document.getElementById("output").innerHTML=dado+"<br>";
+            document.getElementById("output").innerHTML=dado;
 
         }
 
@@ -32,12 +36,43 @@
             {
             casuale=Math.random();
             dado=Math.round(casuale*5)+1;
-            str=str+" "+dado+"<br>"
+            str=str+" "+dado;
             }
 
         document.getElementById("outputN").innerHTML=str;
 
         }
+
+        function LanciaDadoMille(n){
+            let dado = 0;
+            let casuale = 0;
+            let str="";
+            for(let i=0;i<n;i++)
+            {
+            casuale=Math.random();
+            dado=Math.round(casuale*999)+1;
+            str=str+" "+dado;
+            }
+
+        document.getElementById("outputDue").innerHTML=str;
+
+        }
+
+        function LanciaMilleDadi(n){
+            let dado = 0;
+            let casuale = 0;
+            let str="";
+            for(let i=0;i<n;i++)
+            {
+            casuale=Math.random();
+            dado=Math.round(casuale*5)+1;
+            str=str+" "+dado;
+            }
+
+        document.getElementById("outputMille").innerHTML=str;
+
+        }
+        
     </script>
 </body>
 </html>
