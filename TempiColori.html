@@ -22,6 +22,8 @@
         <p id="out">Times</p>
 
         <button type="button" onclick="count()">Push Me</button>
+
+        <p id="Conto">0</p>
       
     </div>
    
@@ -29,16 +31,17 @@
     <script>
       let i = 0;
       let start = Date.now();
-      let CosoClick = 0;
-      const myInterval = setInterval(pippo,1000);
       let contatore = 0;
 
       function count() {
         document.getElementById("out").innerHTML +=
           " " + (Date.now() - start) + " ms";
-        CosoClick++;
+        
   
         document.getElementById("myDIV").style.backgroundColor = "red";
+
+        contatore++;
+        document.getElementById("Conto").innerHTML= contatore.toString();
 
       }
     </script>
