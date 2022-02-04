@@ -5,44 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        #myDIV {
-            background-color: green;
-            width: 200px;
-            height: 200px;
-            padding: 10px;
-        }
-    </style>
   </head>
   <body>
     
 
     
-    <div id="myDIV">
-        <p id="out">Times</p>
+    
+    <p id="out">Times</p>
+    <p id="nclick">Clicks</p>
+    <p id="demolition">Stopwatch </p>
 
-        <button type="button" onclick="count()">Push Me</button>
-
-        <p id="Conto">0</p>
-      
-    </div>
-   
+    <button type="button" onclick="count()">Push Me</button>
+    <button onclick="myStopFunction()">Stop Time</button>
 
     <script>
       let i = 0;
       let start = Date.now();
+      let CosoClick = 0;
+      const myInterval = setInterval(pippo,1000);
       let contatore = 0;
 
       function count() {
         document.getElementById("out").innerHTML +=
           " " + (Date.now() - start) + " ms";
-        
-  
-        document.getElementById("myDIV").style.backgroundColor = "red";
+        CosoClick++;
+        document.getElementById("nclick").innerHTML = CosoClick.toString();
+      }
 
+      function pippo() {
         contatore++;
-        document.getElementById("Conto").innerHTML= contatore.toString();
+        document.getElementById("demolition").innerHTML =contatore+" ";
 
+      }
+
+      function myStopFunction() {
+          clearInterval(myInterval);
       }
     </script>
   </body>
