@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pill"></p>
+    <p id="bill"></p>
+    <p id="boll"></p>
+    <p id="ball"></p>
+    <script>
+        let pippo=[];
+
+        for(let i=0; i<11; i++)
+        {
+            pippo.push(i);
+        }
+    
+    document.getElementById("pill").innerHTML= "Numeri "+pippo;
+
+        let pollo=[];
+
+        for(let i=0; i<8; i++)
+        {
+            pollo.push(i);
+        }
+
+    document.getElementById("bill").innerHTML= "Numeri "+pollo;  
+    document.getElementById("boll").innerHTML=  + pollo[0]+pollo[1]+pollo[2]+pollo[3]+pollo[4]+pollo[5]+pollo[6]+pollo[7];
+    document.getElementById("ball").innerHTML= "Media "+(pollo[0]+pollo[1]+pollo[2]+pollo[3]+pollo[4]+pollo[5]+pollo[6]+pollo[7])/8;
+
+
+    </script>
+</body>
+</html>
