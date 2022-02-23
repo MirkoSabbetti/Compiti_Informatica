@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="count()"> clicca</button>
+    <p id="out0"></p>
+    <p id="out1"></p>
+    <p id="out2"></p>
+    <p id="out3"></p>
+
+    
+    <script>
+        let Start= Date.now();
+        let a = -1;
+        let b = 0;
+        let ArrayTempi =[];
+        let ArrayBoh = [];
+
+        function count() {
+      let Tempi = Date.now() - Start;
+      let a1 = a++;
+      let b1 = b++;
+      ArrayTempi.push(Tempi);
+
+      document.getElementById("out0").innerHTML = Tempi;
+      document.getElementById("out1").innerHTML = ArrayTempi;
+      document.getElementById("out2").innerHTML = ArrayTempi[b1] - ArrayTempi[a1];
+
+      ArrayBoh.push(ArrayTempi[b1] - ArrayTempi[a1]);
+
+      document.getElementById("out3").innerHTML = ArrayBoh;
+
+
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
