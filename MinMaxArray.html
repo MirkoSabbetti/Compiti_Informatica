@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Carica()">Carica</button>
+    <p id="Carica"></p>
+    <button onclick="Min()">Minimo</button>
+    <p id="Min"></p>
+    <button onclick="Max()">Massimo</button>
+    <p id="Max"></p>
+
+    <script>
+
+        var Numb = [];
+
+        function Carica(){
+            
+            Numb.length = 0;
+
+            for (let i=0; i<100; i++) {
+            Numb.push(Math.round(Math.random()*999)); 
+            }  
+
+            document.getElementById("Carica").innerHTML=Numb;
+
+        }
+
+        function Min() {
+            var Min = Math.min.apply(null, Numb);
+            document.getElementById("Min").innerHTML=Min;
+        }
+
+        function Max() {
+            var Max = Math.max.apply(null, Numb);
+            document.getElementById("Max").innerHTML=Max;
+        }
+    </script>
+</body>
+</html>
