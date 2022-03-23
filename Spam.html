@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<button onclick="Play()">Play</button>
+
+<button onclick="Stop()">Stop</button>
+
+
+<script>
+  var Time = setInterval(Play, 3000);
+ 
+
+function Play() {
+
+  
+   setInterval(function(){ alert("Booh!"); });
+}
+
+function Stop() {
+   clearInterval(Time);
+}
+
+</script>
+
+</body>
+</html>
