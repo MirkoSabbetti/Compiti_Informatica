@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    #dati {width: 500px;
+     height:620px;
+     border: 2px outset black;
+     border-color:black;
+     background-color:#ffffff;
+     margin:25px;
+     padding:20px;
+     float:left;
+     border-radius: 10px;
+     font-family: Helvetica, Arial, sans-serif;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+     transition: 0.3s
+    } 
+     
+    #dati:hover{
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);  
+    } 
+
+     #MiaFoto {
+         float:right; 
+         padding:20px;
+         }
+
+     
+
+     .Button {
+     background-color: #9420f3;
+     border: none;
+     color: white;
+     padding: 16px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 20px;
+     transition-duration: 0.4s;
+     cursor: pointer;
+     border-radius: 10px;
+     font-family: Helvetica, Arial, sans-serif;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+    
+     #Destra{
+         float:right;
+        }
+
+     #Sinistra{
+         float:left;
+        }    
+
+
+
+     .Button {
+     background-color: white; 
+     color: black; 
+     border: 2px solid #9420f3;
+     font-family: Helvetica, Arial, sans-serif;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+     .Button:hover {
+     background-color: #9420f3;
+     color: white;
+     font-family: Helvetica, Arial, sans-serif;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+}
+
+
+</style>
+
+</head>
+
+<body>
+     <div id="dati"> 
+         <h1> Dati Anagrafici </h1>
+         <img src="./FotoMia.jpeg" id="MiaFoto" width="200" height="260">
+         <p>Nome: Mirko</p>
+         <p>Cognome: Sabbetti</p>
+         <p>Genere: Maschio </p>
+         <p>Data Di Nascita: 25 Novembre 2005</p>
+         <p>Nato a: Torino </p>
+         <p>Cittadinanza: Italiana</p>
+         <p>Residenza: Nichelino (TO)</p>
+         <p>Professione: Studente</p>
+         <p>Scuola: Maxwell</p>
+         <p>Indirizzo: Telecomunicazioni</p> 
+         
+         <button class="Button" onclick="Presentazione()" id="Sinistra">Mi Presento</button>
+         <button class="Button" onclick="location.href='https://www.w3schools.com/'" id="Sinistra">W3school</button>
+         <button class="Button" onclick="location.href='https://www.netflix.com/'" id="Destra">Netflix</button>
+         <button class="Button" onclick="location.href='https://www.marcopalladino.it/it/'" id="Destra">MarcoPalladino.it</button>
+    
+     </div>
+
+     <script>
+         function Presentazione() {
+             alert("Piacere sono un bottone");
+     }
+     </script>
+
+</body>
+</html>
