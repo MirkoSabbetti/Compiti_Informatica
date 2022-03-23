@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p>Timer da sviluppare!</p>
+
+
+<p id="demo"></p>
+
+
+<button onclick="myStopFunction()">Stop time</button>
+
+
+
+
+<button onclick="window.location.reload(true)">Start time</button>
+
+
+<script>
+myVar = setInterval(myTimer, 1);
+
+
+function myTimer() {
+
+
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  var m=d.getMilliseconds();
+  document.getElementById("demo").innerHTML = t + " "+m;
+}
+
+
+function myStopFunction() {
+  clearInterval(myVar);
+}
+</script>
+
+
+</body>
+</html>
