@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="Lista">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <button onclick="inserisci()">inserisci</button>
+
+    <script>
+        function inserisci() {
+            const nodo1 = document.createElement("li");
+            const nodo2 = document.createElement("li");
+
+            const text1 = document.createTextNode("4");
+            const text2 = document.createTextNode("5");
+
+            nodo1.appendChild(text1);
+            nodo2.appendChild(text2);
+
+            document.getElementById("Lista").appendChild(nodo1);
+            document.getElementById("Lista").appendChild(nodo2);
+        }
+    </script>
+
+</body>
+
+</html>
