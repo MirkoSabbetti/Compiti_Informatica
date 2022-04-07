@@ -9,13 +9,15 @@
 <body>
     <script>
         for (let i=0;i<1000;i++){
-            document.write("<span>"+i+" "+"</span>");
-
+            
             if ((i%10)==0) {
                 document.write("<span style='color:red'>"+i+" "+"</span>");
             }
             if ((i%2)==0) {
                 document.write("<span style='color:green'>"+i+" "+"</span>");
+            }
+            if ((i%2)==1) {
+                document.write("<span style='color:blue'>"+i+" "+"</span>");
             }
         }
     </script>
