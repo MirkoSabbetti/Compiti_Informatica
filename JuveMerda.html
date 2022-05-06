@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="out"></p>
+
+    <script>
+       
+        
+         let i=840;
+         document.getElementById("out").innerHTML+=fattorizzatore(i)+ i+ " ";
+     
+
+
+ function fattorizzatore(i)
+ {  let stringaFattori="";
+    let fineciclo=i/2;
+    for(let fattore=1; fattore<=fineciclo;fattore++)
+      {
+           if (i%fattore==0)
+               {  stringaFattori=stringaFattori+ fattore+" "+"<br>"+"Juve merda"+"<br>";
+               }
+
+
+      }
+  return  stringaFattori;
+
+ }          
+ 
+            for (let g=0;g<1000;g++) {
+                if (IsPrime(i)==true) {
+                    document.write("<span>"+i+"</span> <br>");
+                }
+                else {
+                    i++;
+                }
+            }
+            
+            
+
+
+        function IsPrime(n) {
+              let bOut=true;
+                     for(fattore=2;((fattore<=n/2)&& bOut);fattore++) {
+                           if (n%fattore==0)
+                                    {
+                                        bOut=false;
+                                    }
+                        }
+               return bOut;
+            }
+    </script>
+    
+</body>
+</html>
