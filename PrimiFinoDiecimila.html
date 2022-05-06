@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+            let m=0;
+            let inizio=1;
+            let fine=100;
+        while (fine<=10000) {
+            m=0;
+            for (let i=inizio; i<=fine;i++) {
+                if (IsPrime(i)==true) {
+                    m++;
+                    document.write("<span>"+i+"</span> <br>");
+                }
+            }
+            document.write("<span>"+"I numeri primi da "+inizio+" a "+fine+" sono in totale "+m+"</span> <br><br>");
+            inizio=fine;
+            fine=inizio+100;
+        }
+
+        function IsPrime(n) {
+              let bOut=true;
+                     for(fattore=2;((fattore<=n/2)&& bOut);fattore++) {
+                           if (n%fattore==0)
+                                    {
+                                        bOut=false;
+                                    }
+                        }
+               return bOut;
+            }
+
+    </script>
+    
+</body>
+</html>
