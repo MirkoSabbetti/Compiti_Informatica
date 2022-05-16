@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inizio">Inserisci inizio</label>
+    <input type="number" name="inizio" id="inizio" value="0"> <br>
+    <label for="fine">Inserisci fine</label>
+    <input type="number" name="fine" id="fine" value="1000"> <br>
+    <button onclick="Click()">Genera!</button>
+
+    <script>
+            
+        function Click() {
+            let inizio=0;
+            let fine=0;
+            inizio=document.getElementById("inizio").value;
+            fine=document.getElementById("fine").value;
+
+            for (let i=inizio; i<=fine;i++) {
+                if (IsPrime(i)==true) {
+                    document.write("<span>"+i+"</span> <br>");
+                }
+            }
+        }
+        
+        
+
+        function IsPrime(n) {
+              let bOut=true;
+                     for(fattore=2;((fattore<=n/2)&& bOut);fattore++) {
+                           if (n%fattore==0)
+                                    {
+                                        bOut=false;
+                                    }
+                        }
+               return bOut;
+            }
+
+    </script>
+    
+</body>
+</html>
