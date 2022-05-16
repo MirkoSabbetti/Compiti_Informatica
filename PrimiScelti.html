@@ -18,14 +18,17 @@
         function Click() {
             let inizio=0;
             let fine=0;
+            let primi=[];
             inizio=document.getElementById("inizio").value;
             fine=document.getElementById("fine").value;
 
             for (let i=inizio; i<=fine;i++) {
                 if (IsPrime(i)==true) {
                     document.write("<span>"+i+"</span> <br>");
+                    primi.push(i);
                 }
             }
+            document.write("<p>"+primi+"</p>")
         }
         
         
