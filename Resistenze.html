@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcola</h1>
+    <label for="I">Corrente</label>
+    <input type="number" id="I" value=""> <br>
+    <label for="V">Tensione</label>
+    <input type="number" id="V" value=""> <br>
+    <label for="R1">Prima resistenza</label>
+    <input type="number" id="R1" value=""> <br>
+    <label for="R2">Seconda resistenza</label>
+    <input type="number" id="R2" value=""> <br>
+    <label for="R3">Terza resistenza</label>
+    <input type="number" id="R3" value=""> <br>
+    <button onclick="Serie()">Serie</button>
+    <button onclick="Parallelo()">Parallelo</button>
+    <script>
+        function Serie() {
+            let I,V,R1,R2,R3;
+            let Req,V1,V2,V3;
+
+            I=document.getElementById("I").value;
+            V=document.getElementById("V").value;
+            R1=document.getElementById("R1").value;
+            R2=document.getElementById("R2").value;
+            R3=document.getElementById("R3").value;
+
+            if (I!=0,V!=0,R1!=0,R2!=0,R3!=0) {
+            Req=CalcolaReqSer(R1,R2,R3);
+            V1=CalcolaV(I,R1);
+            V2=CalcolaV(I,R2);
+            V3=CalcolaV(I,R3);
+
+            document.write("<span>"+"Resistenza equivalente: "+Req.toFixed(1)+" Ω"+"</span> <br>");
+            document.write("<span>"+"Prima tensione: "+V1.toFixed(1)+" V"+"</span> <br>");
+            document.write("<span>"+"Seconda tensione: "+V2.toFixed(1)+" V"+"</span> <br>");
+            document.write("<span>"+"Terza tensione: "+V1.toFixed(1)+" V"+"</span> <br>");
+            document.write("<span>"+"Corrente: "+I+" A"+"</span> <br>");
+            }
+            else {
+                alert("Inserisci i valori");
+            }
+        }
+        function CalcolaReqSer(a,b,c) {
+            return -(-a-b-c);
+        }
+        function CalcolaV(a,b) {
+            return a*b;
+        }
+
+        function Parallelo() {
+            let I,V,R1,R2,R3;
+            let Req,I1,I2,I3;
+
+            I=document.getElementById("I").value;
+            V=document.getElementById("V").value;
+            R1=document.getElementById("R1").value;
+            R2=document.getElementById("R2").value;
+            R3=document.getElementById("R3").value;
+
+            if (I!=0,V!=0,R1!=0,R2!=0,R3!=0) {
+
+            Req=CalcolaReqPar(R1,R2,R3);
+            I1=CalcolaI(V,R1);
+            I2=CalcolaI(V,R2);
+            I3=CalcolaI(V,R3);
+
+            document.write("<span>"+"Resistenza equivalente: "+Req.toFixed(1)+" Ω"+"</span> <br>");
+            document.write("<span>"+"Prima corrente: "+I1.toFixed(2)+" I"+"</span> <br>");
+            document.write("<span>"+"Seconda corrente: "+I2.toFixed(2)+" I"+"</span> <br>");
+            document.write("<span>"+"Terza corrente: "+I3.toFixed(2)+" I"+"</span> <br>");
+            document.write("<span>"+"Tensione: "+V+" V"+"</span> <br>");
+            }
+            else {
+                alert("Inserisci i valori");
+            }
+        }
+        function CalcolaReqPar(a,b,c) {
+            let Som1= -(-a-b);
+            let Molt1= a*b;
+            let R12= Molt1/Som1;
+            let Som2= -(-R12-c);
+            let Molt2= R12*c;
+            let Req= Molt2/Som2;
+            return Req;
+        }
+        function CalcolaI(a,b) {
+            return a/b;
+        }
+    </script>
+</body>
+</html>
