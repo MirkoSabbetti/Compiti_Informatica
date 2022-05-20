@@ -1,0 +1,41 @@
+<html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Platform game - single screen</title>
+
+     <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        canvas {
+            border: 3px solid black;
+        }
+     </style>
+     
+   </head>
+   <body>
+        <canvas id="myCanvas"></canvas>
+        
+    <script>
+        let canvas = document.getElementById('myCanvas');
+        canvas.width = 600;
+        canvas.height = 400;
+
+        let ctx = canvas.getContext('2d');
+
+        let x=15;
+
+        for (let i=0; i<10;i++) {
+
+            ctx.beginPath();
+            ctx.arc(x, 20, 5, 0, 2 * Math.PI);
+            ctx.stroke();
+
+            x=x+15;
+        } 
+   </script>
+   </body>
+ </html>
